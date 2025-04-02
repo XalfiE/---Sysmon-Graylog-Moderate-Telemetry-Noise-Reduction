@@ -109,6 +109,8 @@ Excluded: Clipboard (24), Named Pipes (28), WMI Events (19–21)
 
 ---
 
+Building cool things in tech ☁️ | Open-source & security 🚀 | Fuel my work ☕ → https://www.buymeacoffee.com/alfie
+
 ## 🙋 Support
 
 Want help tuning this to match your environment? Open an issue or reach out via Discussions. Contributions welcome!
