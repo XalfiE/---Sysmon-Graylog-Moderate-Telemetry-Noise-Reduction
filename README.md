@@ -1,0 +1,1 @@
+# -Sysmon-Graylog-Moderate-Telemetry-Noise-Reduction
