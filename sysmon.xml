@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sysmon schemaversion="4.50">
+  <HashAlgorithms>sha256</HashAlgorithms>
+  <EventFiltering>
+    <ProcessCreate onmatch="include">
+      <Image condition="is not">C:\Windows\System32\WerFault.exe</Image>
+    </ProcessCreate>
+    <NetworkConnect onmatch="include"/>
+    <ImageLoad onmatch="include">
+      <Image condition="end with">.dll</Image>
+    </ImageLoad>
+    <FileCreate onmatch="include"/>
+    <RegistryEvent onmatch="include">
+      <Rule groupRelation="or">
+        <RegistryKey condition="contains">Run</RegistryKey>
+        <RegistryKey condition="contains">RunOnce</RegistryKey>
+      </Rule>
+    </RegistryEvent>
+    <DnsQuery onmatch="include"/>
+    <FileDelete onmatch="include"/>
+    <ProcessTampering onmatch="include"/>
+    <FileBlockExecutable onmatch="include"/>
+    <SysmonConfigChange onmatch="include"/>
+  </EventFiltering>
+</Sysmon>
